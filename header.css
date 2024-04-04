@@ -1,0 +1,78 @@
+@font-face {
+    font-family: "q";
+    src: url("Quicksand-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: "m";
+    src: url("Monoton-Regular.ttf");
+}
+@font-face {
+    font-family: "n";
+    src: url("Audiowide-Regular.ttf");
+}
+body {
+    font-family: "q";
+}
+.headerFont1{
+    font-family: "n";
+}.headerFont2{
+    font-family: "m";
+}
+
+header {
+    align-items: center;
+    position: fixed;
+    /* display: flex; */
+    justify-content: space-between;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, .5);
+    color: aliceblue;
+    padding: 20px 0;
+    transition: padding 300ms ease;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+  
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: black;
+}
+
+
+
+
+
+header.sticky {
+    background: rgb(29, 29, 29) !important;
+    padding: 10px 20px;
+    color: #f6f5f5;
+}
+
+.carousel-inner>.item {
+    -webkit-transition: 0s !important;
+    -o-transition: 0s !important;
+    transition: 0s !important;
+}
+.carousel-item-next.carousel-item-left{
+    display: block !important;
+  }
+ 
+
+  /* .carousel-item {
+    width: 99%;
+    overflow-x: hidden;
+  } */
+    

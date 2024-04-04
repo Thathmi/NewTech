@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>New Tech | Home page</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/t3.jpg" />
+
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="button.css" />
+    <link rel="stylesheet" href="buyButton.css" />
+
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
+
+    <style>
+        .container2 {
+            position: relative;
+            width: 50%;
+        }
+
+        .image {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 27%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+
+        }
+
+        .container2:hover .image {
+            opacity: 0.3;
+        }
+
+        .container2:hover .middle {
+            opacity: 1;
+        }
+
+        .text {
+            background-color: rgb(112, 184, 217);
+            color: white;
+            font-size: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            margin-top: -30px;
+            padding-top: 7px;
+            position: relative;
+        }
+        .pagination {
+  display: inline-block;
+}
+
+.pagination button {
+  color: rgb(228, 222, 222);
+  background-color: rgb(69, 68, 68);
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.pagination button.active {
+  background-color:rgb(112, 184, 217);
+  color: rgb(81, 80, 80);
+}
+.pagination button:hover:not(.active) {background-color: rgb(162, 191, 198);color: black;}
+    </style>
+</head>
+
+<body style="overflow-x: hidden;background-color: black;">
+
+    <header>
+        <div class="row">
+            <div class="col-12 col-md-3 col-lg-3"
+                style="justify-content: center;align-items:center;display: flex;font-size: 27px;">
+
+                <div class="headerFont1" style="display:inline-block;color:rgb(84, 120, 176)">New</div>
+                <div class="headerFont2" style="display:inline-block;color:rgb(245, 249, 255)">TECH</div>
+
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-6">
+                <div style="justify-content: center;align-items:center;display: flex;font-weight:bold;cursor: pointer;">
+                    <div onclick='window.location="index.html"'; style="display:inline-block;margin-left:20px ;">HOME</div>
+                    <div style="display:inline-block;margin-left:20px ">ABOUT US</div>
+                    <div style="display:inline-block;margin-left:20px ">SHOP</div>
+                    <div style="display:inline-block;margin-left:20px ">CONTACTS</div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-3 col-lg-3" style="font-size: 19px">
+                <div style="align-items:end;justify-content: end;;display: flex;">
+                    <i onclick='window.location="advanceSearch.html"'; class="bi bi-search" style="margin-right: 10px;margin-left: 10px;"></i> |
+                    <i onclick='window.location="watchList.html"'; class="bi bi-suit-heart-fill" style="margin-right: 10px;margin-left: 10px;"></i> |
+                    <i onclick='window.location="cart.html"'; class="bi bi-cart-fill" style="margin-right: 10px;margin-left: 10px;"></i> |
+                  
+                    <div class="dropdown" style="height:20px ;">
+                        <button class="btn dropdown-toggle" type="button" style="height:30px;width:40px ;margin-top:-29px ;"
+                            id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-fill" style="color:white ;font-size: 19px"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark bg-dark"
+                            aria-labelledby="dropdownMenuButton2">
+
+                            <li><a class="dropdown-item" href="userLogIn.html">Sign in</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="userProfileUpdate.html">Profile</a>
+                            </li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+         
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <div class="row" style="margin-top:150px">
+
+        <div class="col-12" style="justify-content: center;display:flex;align-items:center;">
+
+            <div class="input-group" style="width: 60%;">
+                <input type="text" placeholder="Search here" class="form-control form-control-sm" aria-label="Text input with segmented dropdown button">
+               
+                <button style="height:31px ;" type="button" class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                  <span class="visually-hidden">Category</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">Phone</a></li>
+                  <li><a class="dropdown-item" href="#">Laptop</a></li>
+                  <li><a class="dropdown-item" href="#">Tablet</a></li>
+                  <li><a class="dropdown-item" href="#">Camera</a></li>
+                  <li><a class="dropdown-item" href="#">Drone</a></li>
+                </ul>
+                <button type="button" style="height:31px ;width: 10%;" class="btn btn-primary"><i class="bi bi-search"></i></button>
+              </div>
+
+        </div>
+
+        <div class="col-12" style="color: white;margin-top: 50px;">
+            <div class="row">
+
+                <div class="col-6 col-lg-3">
+
+                    <label class="form-label" style="margin-left:20px;color:skyblue;">Adding Date :</label> <br>
+
+                        <div class="form-check" style="margin-left:30px;">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1" style="font-size: 14px;">
+                                New to oldest
+                            </label>
+                        </div>
+                        <div class="form-check" style="margin-left:30px">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                                >
+                            <label class="form-check-label" for="flexRadioDefault2" style="font-size: 14px;">
+                                Oldest to new
+                            </label>
+                        </div>
+                </div>
+
+                <div class="col-6 col-lg-3">
+
+                    <label class="form-label" style="margin-left:20px;color:skyblue;">Price :</label> <br>
+
+                        <div class="form-check" style="margin-left:30px;">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1" style="font-size: 14px;">
+                                Lowest to Highest
+                            </label>
+                        </div>
+                        <div class="form-check" style="margin-left:30px">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                                >
+                            <label class="form-check-label" for="flexRadioDefault2" style="font-size: 14px;">
+                                Highest to Lowest
+                            </label>
+                        </div>
+                </div>
+                <div class="col-6 col-lg-3">
+
+                    <label class="form-label" style="margin-left:20px;color:skyblue;">Selling rate :</label> <br>
+
+                        <div class="form-check" style="margin-left:30px;">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1" style="font-size: 14px;">
+                                Lowest to Highest
+                            </label>
+                        </div>
+                        <div class="form-check" style="margin-left:30px">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                                >
+                            <label class="form-check-label" for="flexRadioDefault2" style="font-size: 14px;">
+                                Highest to Lowest
+                            </label>
+                        </div>
+                </div>
+                <div class="col-6 col-lg-3">
+
+                    <label class="form-label" style="margin-left:20px;color:skyblue;">Status :</label> <br>
+
+                        <div class="form-check" style="margin-left:30px;">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1" style="font-size: 14px;">
+                                Brandnew
+                            </label>
+                        </div>
+                        <div class="form-check" style="margin-left:30px">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                                >
+                            <label class="form-check-label" for="flexRadioDefault2" style="font-size: 14px;">
+                                Used
+                            </label>
+                        </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12" style="align-items:center;justify-content: center;display: flex;margin-top: 80px;">
+        <div class="row" style="align-items:center;justify-content: center;display: flex;">
+
+            <div class="col-12 col-lg-3">
+                <div class="card text-white bg-dark container2" style="width: 17rem; height: 520px;">
+
+                    <img src="images/p2.png" class="card-img-top image" style="height: 250px;">
+
+                    <div class="middle">
+                        <div class="text" style="display:inline-block;"> <i class="bi bi-suit-heart-fill"></i> </div>
+                        <div class="text" style="display:inline-block;margin-left: 10px;"> <i class="bi bi-cart-fill"></i> </div>
+                    </div>
+                    <div class="card-body">
+
+                        <h5 class="card-title" style="font-weight: bold;">Samsung Galaxy S21 FE</h5>
+                        <div style="background-color: rgb(112, 184, 217);width:25%;height:2px"></div>
+                        <p class="card-text  mt-2">It boasts a flat Gorilla Glass Victus panel on the front, a
+                            rounded metal frame, and a plastic rear panel.</p>
+                            <p style="color:rgb(123, 204, 241) ;font-weight: bolder;font-size: 20px;">Rs.98,780</p>
+                        <div class="wrapper" style="margin-top: 40px;">
+                            <a href="#" style=" text-decoration: none;color: aliceblue;font-weight: bold;">BUY
+                                NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-3">
+                <div class="card text-white bg-dark container2" style="width: 17rem;height: 520px;">
+                    <img src="images/c1.png" class="card-img-top image" style="height: 250px;">
+
+                    <div class="middle">
+                        <div class="text" style="display:inline-block;"> <i class="bi bi-suit-heart-fill"></i> </div>
+                        <div class="text" style="display:inline-block;margin-left: 10px;"> <i class="bi bi-cart-fill"></i> </div>
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-weight: bold;">Olympus TG-6 Camera</h5>
+
+                        <div style="background-color: rgb(112, 184, 217);width:25%;height:2px"></div>
+
+                        <p class="card-text mt-2">When you're looking for cameras that are small in size yet still
+                            deliver excellent results,
+                            Olympus is the brand for you. .</p>
+                            <p style="color:rgb(123, 204, 241) ;font-weight: bolder;font-size: 20px;">Rs.237,000</p>
+
+                        <div class="wrapper" style="margin-top: 40px;">
+                            <a href="#" style=" text-decoration: none;color: aliceblue;font-weight: bold;">BUY
+                                NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-3">
+                <div class="card text-white bg-dark container2" style="width: 17rem;height: 520px;">
+                    <img src="images/t1.png" class="card-img-top image" style="height: 250px;">
+
+                    <div class="middle">
+                        <div class="text" style="display:inline-block;"> <i class="bi bi-suit-heart-fill"></i> </div>
+                        <div class="text" style="display:inline-block;margin-left: 10px;"> <i class="bi bi-cart-fill"></i> </div>
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-weight: bold;">Samsung Galaxy Tab S</h5>
+
+                        <div style="background-color: rgb(112, 184, 217);width:25%;height:2px"></div>
+
+                        <p class="card-text  mt-2">Android 10, upgradable to Android 12, One UI 4
+                            Chipset Qualcomm SM8250 Snapdragon 865 5G+ (7 nm+).</p>
+                            <p style="color:rgb(123, 204, 241) ;font-weight: bolder;font-size: 20px;">Rs.87,000</p>
+
+                        <div class="wrapper" style="margin-top: 40px;">
+                            <a href="#" style=" text-decoration: none;color: aliceblue;font-weight: bold;">BUY
+                                NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-3">
+                <div class="card text-white bg-dark container2" style="width: 17rem;height: 520px;">
+                    <img src="images/l1.png" class="card-img-top image" style="height: 250px;">
+
+                    <div class="middle">
+                        <div class="text" style="display:inline-block;"> <i class="bi bi-suit-heart-fill"></i> </div>
+                        <div class="text" style="display:inline-block;margin-left: 10px;"> <i class="bi bi-cart-fill"></i> </div>
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-weight: bold;">MacBook Pro 13"</h5>
+
+                        <div style="background-color: rgb(112, 184, 217);width:25%;height:2px"></div>
+
+                        <p class="card-text  mt-2">8-core CPU with 4 performance cores and 4 efficiency cores
+                            8-core GPU
+                            16-core Neural Engine
+
+                            Up to 17 hours wireless web.</p>
+                            <p style="color:rgb(123, 204, 241) ;font-weight: bolder;font-size: 20px;">Rs.507,900</p>
+
+                        <div class="wrapper" style="margin-top: 40px;">
+                            <a href="#" style=" text-decoration: none;color: aliceblue;font-weight: bold;">BUY
+                                NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-3 mt-5">
+                <div class="card text-white bg-dark container2" style="width: 17rem;height: 520px;">
+                    <img src="images/t2.png" class="card-img-top image" style="height: 250px;">
+
+                    <div class="middle">
+                        <div class="text" style="display:inline-block;"> <i class="bi bi-suit-heart-fill"></i> </div>
+                        <div class="text" style="display:inline-block;margin-left: 10px;"> <i class="bi bi-cart-fill"></i> </div>
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-weight: bold;">iPad Pro</h5>
+
+                        <div style="background-color: rgb(112, 184, 217);width:25%;height:2px"></div>
+
+                        <p class="card-text  mt-2">Retina display.
+                            10.2-inch (diagonal) LED-backlit Multi-Touch display with IPS technology.
+                            .</p>
+                            <p style="color:rgb(123, 204, 241) ;font-weight: bolder;font-size: 20px;">Rs.109,000</p>
+
+                        <div class="wrapper" style="margin-top: 40px;">
+                            <a href="#" style=" text-decoration: none;color: aliceblue;font-weight: bold;">BUY
+                                NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-3 mt-5">
+                <div class="card text-white bg-dark container2" style="width: 17rem;height: 520px;">
+                    <img src="images/c2.png" class="card-img-top image" style="height: 250px;">
+
+                    <div class="middle">
+                        <div class="text" style="display:inline-block;"> <i class="bi bi-suit-heart-fill"></i> </div>
+                        <div class="text" style="display:inline-block;margin-left: 10px;"> <i class="bi bi-cart-fill"></i> </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-weight: bold;">Intax mini 11"</h5>
+
+                        <div style="background-color: rgb(112, 184, 217);width:25%;height:2px"></div>
+
+                        <p class="card-text  mt-2">mini 11 captures bright backgrounds and bright subjects
+                             even in dark scenes..no need for any special settings.</p>
+                            <p style="color:rgb(123, 204, 241) ;font-weight: bolder;font-size: 20px;">Rs. 110,000</p>
+
+                        <div class="wrapper" style="margin-top: 40px;">
+                            <a href="#" style=" text-decoration: none;color: aliceblue;font-weight: bold;">BUY
+                                NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-3 mt-5">
+                <div class="card text-white bg-dark container2 " style="width: 17rem;height: 520px;">
+                    <img src="images/p4.png" class="card-img-top image" style="height: 250px;">
+
+                    <div class="middle">
+                        <div class="text" style="display:inline-block;"> <i class="bi bi-suit-heart-fill"></i> </div>
+                        <div class="text" style="display:inline-block;margin-left: 10px;"> <i class="bi bi-cart-fill"></i> </div>
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-weight: bold;">iPhone 12 mini</h5>
+
+                        <div style="background-color: rgb(112, 184, 217);width:25%;height:2px"></div>
+
+                        <p class="card-text  mt-2">8-core CPU with 4 performance cores and 4 efficiency cores
+                            8-core GPU
+                            16-core Neural Engine
+
+                            Up to 17 hours wireless web.</p>
+                            <p style="color:rgb(123, 204, 241) ;font-weight: bolder;font-size: 20px;">Rs.189,500</p>
+
+                        <div class="wrapper" style="margin-top: 40px;">
+                            <a href="#" style=" text-decoration: none;color: aliceblue;font-weight: bold;">BUY
+                                NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-3 mt-5">
+                <div class="card text-white bg-dark container2" style="width: 17rem;height: 520px;">
+                    <img src="images/d1.png" class="card-img-top image" style="height: 250px;">
+
+                    <div class="middle">
+                        <div class="text" style="display:inline-block;"> <i class="bi bi-suit-heart-fill"></i> </div>
+                        <div class="text" style="display:inline-block;margin-left: 10px;"> <i class="bi bi-cart-fill"></i> </div>
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-weight: bold;">DJI Mini 2</h5>
+
+                        <div style="background-color: rgb(112, 184, 217);width:25%;height:2px"></div>
+
+                        <p class="card-text  mt-2">At less than 249 g, it weighs about as much as an apple 
+                            and fits in the palm of your handCompact and convenient,.</p>
+                            <p style="color:rgb(123, 204, 241) ;font-weight: bolder;font-size: 20px;">Rs.290,900</p>
+
+                        <div class="wrapper" style="margin-top: 40px;">
+                            <a href="#" style=" text-decoration: none;color: aliceblue;font-weight: bold;">BUY
+                                NOW</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+</div>
+</div>
+
+<!-- pagination  -->
+<div class="row">
+<div class="col-12" style="justify-content: center;display:flex;align-items:center;margin-top: 50px;">
+    <div class="pagination">
+        <button href="#">&laquo;</button>
+        <button class="active" href="#">1</button>>
+        <button  href="#">2</button>
+        <button href="#">3</button>
+        <button href="#">4</button>
+        <button href="#">5</button>
+        <button href="#">6</button>
+        <button href="#">&raquo;</button>
+      </div>
+</div>
+</div>
+
+  <!-- pagination -->
+
+    <!-- footer -->
+
+    <footer class="bg-secondary text-white pt-5 pb-4" style="margin-top: 100px;text-align: end;">
+        <div class="col-12 text-center text-md-start">
+            <div class="row text-center text-md-start">
+                <div class="col-12 col-md-3 col-lg-4 mx-auto mt-3" style="text-align: start">
+                    <h5 class="text-uppercase mb-4 text-info">Company Name</h5>
+                    <p>Here we are the newTech.lk&trade; to support you for accompolish your dessire by selling high
+                        quality products</p>
+
+                </div>
+                <!-- <div class="col-12 col-md-3 col-lg-2 mx-auto mt-3">
+                    <p>Copyright &copy;2021 Beleri All Rights Reserved</p>
+                </div> -->
+                <div class="col-12 col-md-4 col-lg-1 mx-auto mt-3">
+                    <div class="text-center text-md-start">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;">
+                                    <i class="bi bi-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;">
+                                    <i class="bi bi-google"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;">
+                                    <i class="bi bi-linkedin"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 mx-auto mt-3" style="text-align: start">
+                    <h5 class="text-uppercase mb-4 text-info">Contact</h5>
+                    <p>
+                        <i class="bi bi-house-fill pe-1"></i>
+                        <span>324 Havelock Rd, Colombo 5, Sri Lanka</span>
+                    </p>
+                    <p>
+                        <i class="bi bi-envelope-fill pe-1"></i>
+                        <span>newTech@gmail.com</span>
+                    </p>
+                    <p>
+                        <i class="bi bi-telephone-fill pe-1"></i>
+                        <span>+94112546978</span>
+                    </p>
+                    <p>
+                        <i class="bi bi-printer-fill pe-1"></i>
+                        <span>+94112546978</span>
+                    </p>
+                </div>
+            </div>
+
+            <hr class="mb-4" />
+
+        </div>
+    </footer>
+
+    <script src="header.js"></script>
+
+    <script src="bootstrap.bundle.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+</body>
+
+</html>

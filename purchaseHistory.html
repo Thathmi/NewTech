@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>newTech | Putchase History</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/t3.jpg" />
+
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="bootstrap.css" />
+    <!-- <link rel="stylesheet" href="bootstrap.min.css" /> -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
+
+    <style>
+        .pagination {
+            display: inline-block;
+        }
+
+        .pagination button {
+            color: rgb(228, 222, 222);
+            background-color: rgb(69, 68, 68);
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+
+        .pagination button.active {
+            background-color: rgb(112, 184, 217);
+            color: rgb(81, 80, 80);
+        }
+
+        .pagination button:hover:not(.active) {
+            background-color: rgb(162, 191, 198);
+            color: black;
+        }
+    </style>
+</head>
+
+<body style="background-color: black;color:whitesmoke;overflow-x: hidden;">
+
+    <header>
+        <div class="row">
+            <div class="col-12 col-md-3 col-lg-3"
+                style="justify-content: center;align-items:center;display: flex;font-size: 27px;">
+
+                <div class="headerFont1" style="display:inline-block;color:rgb(84, 120, 176)">New</div>
+                <div class="headerFont2" style="display:inline-block;color:rgb(245, 249, 255)">TECH</div>
+
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-6">
+                <div style="justify-content: center;align-items:center;display: flex;font-weight:bold;cursor: pointer;">
+                    <div onclick='window.location="index.html"' ; style="display:inline-block;margin-left:20px ;">HOME
+                    </div>
+                    <div style="display:inline-block;margin-left:20px ">ABOUT US</div>
+                    <div style="display:inline-block;margin-left:20px ">SHOP</div>
+                    <div style="display:inline-block;margin-left:20px ">CONTACTS</div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-3 col-lg-3" style="font-size: 19px">
+                <div style="align-items:end;justify-content: end;;display: flex;">
+                    <i onclick='window.location="advanceSearch.html"' ; class="bi bi-search"
+                        style="margin-right: 10px;margin-left: 10px;"></i> |
+                    <i onclick='window.location="watchList.html"' ; class="bi bi-suit-heart-fill"
+                        style="margin-right: 10px;margin-left: 10px;"></i> |
+                    <i onclick='window.location="cart.html"' ; class="bi bi-cart-fill"
+                        style="margin-right: 10px;margin-left: 10px;"></i> |
+
+                    <div class="dropdown" style="height:20px ;">
+                        <button class="btn dropdown-toggle" type="button"
+                            style="height:30px;width:40px ;margin-top:-29px ;" id="dropdownMenuButton2"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-fill" style="color:white ;font-size: 19px"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark bg-dark" aria-labelledby="dropdownMenuButton2">
+
+                            <li><a class="dropdown-item" href="userLogIn.html">Sign in</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="userProfileUpdate.html">Profile</a>
+                            </li>
+                            <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <div class="co-12" style="height:200px;width:100%">
+        <img src="images/db3.jpg" style="background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;width: 100%;height: 120px;" alt="">
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-12 text-center mb-3" style="margin-top: -80px;">
+                <span class="fs-1 fw-bold text-white">Transaction History</span>
+            </div>
+
+            <div class="col-12">
+                <div class="row">
+
+                    <div class="col-12 d-none d-lg-block bg-dark">
+                        <div class="row">
+
+                            <div class="col-1">
+                                <label class="form-label  fw-bold" style="color: #769CC9;">#</label>
+                            </div>
+
+                            <div class="col-4">
+                                <label class="form-label fw-bold" style="color: #769CC9;">Order details</label>
+                            </div>
+
+                            <div class="col-1 text-end">
+                                <label class="form-label fw-bold" style="color: #769CC9;">Quanity</label>
+                            </div>
+
+                            <div class="col-1 text-end">
+                                <label class="form-label fw-bold" style="color: #769CC9;">Amount</label>
+                            </div>
+
+                            <div class="col-2 text-end">
+                                <label class="form-label w-bold" style="color: #769CC9;">Purchase Date & Time</label>
+                            </div>
+
+                            <div class="col-4 bg-light"></div>
+
+                            <div class="col-12">
+                                <hr class="border border-2 border-primary">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="row g-2">
+                            <div class="col-12 col-lg-1 " style="background-color: #769CC9;">
+                                <label class="form-label text-white fs-6 pt-5 pb-5">6554</label>
+                            </div>
+                            <div class="col-12 col-lg-4 bg-dark">
+                                <div class="row ms-lg-2 justify-content-center align-content-center">
+                                    <div class="card mb-3 bg-dark" style="max-width: 540px;">
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+
+                                                <img src="images/c2.png" class="img-fluid rounded-start">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body bg-dark">
+
+                                                    <h5 class="card-title">Intax mini 11</h5>
+
+                                                    <p class="card-text" style="font-size: 15px;"><b>Seller :</b>
+                                                        Manjari Upasena
+                                                    </p>
+                                                    <p class="card-text" style="font-size: 15px;"><b>Price :</b> Rs.
+                                                        100,000.00
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-1 text-start text-lg-center bg-dark">
+                                <label class="form-label fs-6 pt-5">qty</label>
+                            </div>
+
+                            <div class="col-12 col-lg-1 text-start text-lg-center " style="background-color: #769CC9;">
+                                <label class="form-label text-white fs-6 pc-3 py-5">Rs. 102,000.00</label>
+                            </div>
+
+                            <div class="col-12 col-lg-2 text-start text-lg-center bg-dark">
+                                <label class="form-label fs-6 pc-3 py-5">2022-05-20</label>
+                            </div>
+
+                            <div class="col-12 col-lg-3 bg-dark">
+                                <div class="row">
+                                    <div class="col-6 d-grid">
+                                        <button class="btn mt-5 btn-outline-success btn-sm fs-6"
+                                            onclick="feedback();"><i class='bx bx-info-circle bx-flashing'
+                                                style="color:#2c44bb;height: 40px;"></i>Feedback</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <hr class="border border-2 border-primary">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2 -->
+
+                    <div class="col-12">
+                        <div class="row g-2">
+                            <div class="col-12 col-lg-1 " style="background-color: #769CC9;">
+                                <label class="form-label text-white fs-6 pt-5 pb-5">4589</label>
+                            </div>
+                            <div class="col-12 col-lg-4 bg-dark">
+                                <div class="row ms-lg-2 justify-content-center align-content-center">
+                                    <div class="card mb-3 bg-dark" style="max-width: 540px;">
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+
+                                                <img src="images/t1.png" class="img-fluid rounded-start">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body bg-dark">
+
+                                                    <h5 class="card-title">iPad</h5>
+
+                                                    <p class="card-text" style="font-size: 15px;"><b>Seller :</b>
+                                                        Dulanjana Idupa
+                                                    </p>
+                                                    <p class="card-text" style="font-size: 15px;"><b>Price :</b>
+                                                        Rs.167,000.00
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-lg-1 text-start text-lg-center bg-dark">
+                                <label class="form-label fs-6 pt-5">1</label>
+                            </div>
+
+                            <div class="col-12 col-lg-1 text-start text-lg-center " style="background-color: #769CC9;">
+                                <label class="form-label text-white fs-6 pc-3 py-5">Rs. 167,900.00</label>
+                            </div>
+
+                            <div class="col-12 col-lg-2 text-start text-lg-center bg-dark">
+                                <label class="form-label fs-6 pc-3 py-5">2022-05-10</label>
+                            </div>
+
+                            <div class="col-12 col-lg-3 bg-dark">
+                                <div class="row">
+                                    <div class="col-6 d-grid">
+                                        <button class="btn mt-5 btn-outline-success btn-sm fs-6"
+                                            onclick="feedback();"><i class='bx bx-info-circle bx-flashing'
+                                                style="color:#2c44bb;height: 40px;"></i>Feedback</button>
+                                    </div>
+                                    \
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <hr class="border border-2 border-primary">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- pagination  -->
+    <div class="row">
+        <div class="col-12" style="justify-content: center;display:flex;align-items:center;margin-top: 50px;">
+            <div class="pagination">
+                <button href="#">&laquo;</button>
+                <button class="active" href="#">1</button>>
+                <button href="#">2</button>
+                <button href="#">3</button>
+                <button href="#">4</button>
+                <button href="#">5</button>
+                <button href="#">6</button>
+                <button href="#">&raquo;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- pagination -->
+
+    <!-- footer -->
+
+    <footer class="bg-secondary text-white pt-5 pb-4" style="margin-top: 100px;text-align: end;">
+        <div class="col-12 text-center text-md-start">
+            <div class="row text-center text-md-start">
+                <div class="col-12 col-md-3 col-lg-4 mx-auto mt-3" style="text-align: start">
+                    <h5 class="text-uppercase mb-4 text-info">Company Name</h5>
+                    <p>Here we are the newTech.lk&trade; to support you for accompolish your dessire by selling high
+                        quality products</p>
+
+                </div>
+                <div class="col-12 col-md-4 col-lg-1 mx-auto mt-3">
+                    <div class="text-center text-md-start">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;">
+                                    <i class="bi bi-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;">
+                                    <i class="bi bi-google"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;">
+                                    <i class="bi bi-linkedin"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 mx-auto mt-3" style="text-align: start">
+                    <h5 class="text-uppercase mb-4 text-info">Contact</h5>
+                    <p>
+                        <i class="bi bi-house-fill pe-1"></i>
+                        <span>324 Havelock Rd, Colombo 5, Sri Lanka</span>
+                    </p>
+                    <p>
+                        <i class="bi bi-envelope-fill pe-1"></i>
+                        <span>newTech@gmail.com</span>
+                    </p>
+                    <p>
+                        <i class="bi bi-telephone-fill pe-1"></i>
+                        <span>+94112546978</span>
+                    </p>
+                    <p>
+                        <i class="bi bi-printer-fill pe-1"></i>
+                        <span>+94112546978</span>
+                    </p>
+                </div>
+            </div>
+
+            <hr class="mb-4" />
+
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="fd" tabindex="-1" aria-labelledby="exampleModalLabel" style="z-index: 99;"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <textarea id="feedtxt" cols="30" rows="10" class="form-control fs-5"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send
+                        Feedback</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+<script>
+    function feedback() {
+            
+            $('#fd').modal('show');
+            alert("l");
+        }
+</script>
+    <script src="bootstrap.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <!-- <script src="bootstrap.bundle.js"></script> -->
+
+</body>
+
+</html>
